@@ -1,0 +1,3 @@
+[R0] Packet for R3 (FEC R0->R3). Pushing Label 300. Sending to R2
+[R2] Received packet with In-Label 300. Swapping for Out-Label 300. Sending to R3.
+[R3] Received packet with In-Label 300. Popping Label. Packet delivered.
