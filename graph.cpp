@@ -50,8 +50,8 @@ void buildLabelSwap(int u, int v){
     auto [curr_label, curr_node] = fec_to_label[{u,v}];
     while (curr_node != v)
     {
-        label_swap[curr_node][curr_label] = {INGRESS_LABEL,routing_table[1][curr_node][v]};
-        curr_label = INGRESS_LABEL;
+        label_swap[curr_node][curr_label] = {TRANSIT_LABEL,routing_table[1][curr_node][v]};
+        curr_label = TRANSIT_LABEL;
         curr_node = routing_table[1][curr_node][v];
     }
 }
