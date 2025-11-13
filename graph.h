@@ -35,3 +35,4 @@ void buildGraph();
 void djikstraPerNode(int node);
 void buildFECtoLabel(int start, int end);
 void buildLabelSwap(int start, int end);
+void printRoutingTables(FILE* file);

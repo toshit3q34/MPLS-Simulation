@@ -15,6 +15,9 @@ int main()
     buildFECtoLabel(R0,R3);
     buildLabelSwap(R0,R3);
 
+    // Printing routing tables
+    printRoutingTables(file);
+
     // Simulation henceforth
     Packet packet = {R0,R3,EMPTY_LABEL};
     int router = R0;

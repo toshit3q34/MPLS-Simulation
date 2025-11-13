@@ -56,6 +56,29 @@ void buildLabelSwap(int u, int v){
     }
 }
 
+void printRoutingTables(FILE* file) {
+    for (int u = 0; u < NODES; u++) 
+    {
+        fprintf(file, "Routing Table for Router R%d:\n", u);
+        fprintf(file, "Destination | Next Hop | Total Cost\n");
+        fprintf(file, "------------------------------------\n");
+        for (int v = 0; v < NODES; v++) {
+            int cost = routing_table[0][u][v];
+            int next = routing_table[1][u][v];
+            if (cost == INT_MAX) {
+                fprintf(file, "R%d  |    -    |      INF\n", v);
+                continue;
+            }
+            if (u == v) {
+                fprintf(file, "R%d  |    R%d    |    %d\n", v, u, cost);
+            } else {
+                fprintf(file, "R%d  |    R%d    |    %d\n", v, next, cost);
+            }
+        }
+        fprintf(file, "\n");
+    }
+}
+
 vector<vector<array<int,2>>> adj;
 array<vector<vector<int>>,2> routing_table;
 vector<unordered_map<int, array<int,2>>> label_swap;

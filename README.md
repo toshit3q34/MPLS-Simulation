@@ -2,6 +2,12 @@
 
 This project simulates **MPLS (Multiprotocol Label Switching)** over a small 4-router network with shortest-path forwarding and label-based switching.
 
+Implemented by :
+Toshit Jain (230101106)
+Tanmay Pratap Singh (230101102)
+Tedla Mahaswin (230101104)
+Purab Agarwal (230101083)
+
 ---
 
 ## Features Implemented
